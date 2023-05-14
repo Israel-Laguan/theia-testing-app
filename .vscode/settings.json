@@ -1,0 +1,49 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "eslint.format.enable": true,
+  "eslint.packageManager": "npm",
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "search.exclude": {
+    "**/dist": true,
+    "**/*.log": true
+  },
+  "standard.usePackageJson": true,
+  "stylelint.validate": [
+    "css",
+    ".module.scss"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": [
+    "testid"
+  ],
+}
