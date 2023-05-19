@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { InfinitySpin } from 'react-loader-spinner'
-import { Loader } from './loader'
+import { Loader } from './loader';
 
 const Exam = () => {
   // Preguntas del JSON
@@ -23,14 +23,10 @@ const Exam = () => {
       const reader = new FileReader()
       reader.onload = (event: any) => {
         try {
-          const jsonData = JSON.parse(event.target.result)
-
+          const jsonData = JSON.parse(event.target.result);
           if (jsonData) {
-            let promise = new Promise((resolve, reject) => {
-              // Ejecutar primero la funcion del spinner
-              notify('Cargado de manera satisfactoria')
-            })
-
+            notify('Cargado de manera satisfactoria');
+            
             // Enviamos las preguntas al estado
             setQuestions(jsonData.questions)
             setSuccess(true) // JSON cargado de manera satisfactoria
@@ -58,6 +54,7 @@ const Exam = () => {
     }
     console.log(`${loading ? 'Loading...' : 'Get a JSON'};`)
     setLoading(true)
+    return 
   }
 
   useEffect(() => {
@@ -97,7 +94,7 @@ const Exam = () => {
   }
 
   return (
-    <div>
+    <main className='main'>
       <h1>Survey Data </h1>
       <input
         onClick={loadingInfo}
@@ -108,10 +105,10 @@ const Exam = () => {
         type="file"
       />
 
-      {error && <p>{error}</p>}
+      {error ? error : <p>{success}</p>}
       {questions.length > 0 && currentQuestionIndex < questions.length ? (
         <form id="surveyForm" onSubmit={handleSubmit}>
-          {success && <p>JSON Cargado de manera satisfactoria</p>}
+          {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
             {/* Render question options */}
@@ -140,7 +137,7 @@ const Exam = () => {
         </button>
       )}
       <ToastContainer />
-    </div>
+    </main>
   )
 }
 
