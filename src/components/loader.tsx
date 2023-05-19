@@ -1,7 +1,4 @@
-import { InfinitySpin } from  'react-loader-spinner'
-
-
-
+import { InfinitySpin } from  'react-loader-spinner';
 export const Loader = () => {
     return (
         <div className="loader">
