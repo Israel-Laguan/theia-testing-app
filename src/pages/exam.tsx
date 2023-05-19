@@ -26,7 +26,7 @@ const Exam = () => {
           const jsonData = JSON.parse(event.target.result);
           if (jsonData) {
             notify('Cargado de manera satisfactoria');
-            
+
             // Enviamos las preguntas al estado
             setQuestions(jsonData.questions)
             setSuccess(true) // JSON cargado de manera satisfactoria
@@ -62,7 +62,7 @@ const Exam = () => {
     let data = localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
   }, [selectedOptions])
 
-  const handleSubmit = (event: any) => {
+  const handleNextQuestion = (event: any) => {
     event.preventDefault()
     // Pasamos a la siguiente pregunta
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
@@ -107,7 +107,7 @@ const Exam = () => {
 
       {error ? error : <p>{success}</p>}
       {questions.length > 0 && currentQuestionIndex < questions.length ? (
-        <form id="surveyForm" onSubmit={handleSubmit}>
+        <form id="surveyForm" onSubmit={handleNextQuestion}>
           {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
