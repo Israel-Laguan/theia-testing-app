@@ -1,0 +1,137 @@
+{
+  "name": "Cuestionario",
+  "maxPointsPossible": 100,
+  "description": "Este es un cuestionario para conocer más sobre ti.",
+  "questions": [
+    {
+      "question": "¿De qué país eres?",
+      "hint": "Selecciona tu país de origen",
+      "options": [
+        {
+          "option": "Colombia",
+          "explanation": "Eres de Colombia",
+          "points": 10
+        },
+        {
+          "option": "Estados Unidos",
+          "explanation": "Eres de Estados Unidos",
+          "points": 8
+        },
+        {
+          "option": "España",
+          "explanation": "Eres de España",
+          "points": 6
+        },
+        {
+          "option": "México",
+          "explanation": "Eres de México",
+          "points": 7
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es tu edad?",
+      "hint": "Selecciona tu rango de edad",
+      "options": [
+        {
+          "option": "18-25",
+          "explanation": "Tienes entre 18 y 25 años",
+          "points": 9
+        },
+        {
+          "option": "26-35",
+          "explanation": "Tienes entre 26 y 35 años",
+          "points": 7
+        },
+        {
+          "option": "36-45",
+          "explanation": "Tienes entre 36 y 45 años",
+          "points": 6
+        },
+        {
+          "option": "46-55",
+          "explanation": "Tienes entre 46 y 55 años",
+          "points": 5
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es tu nivel educativo?",
+      "hint": "Selecciona tu nivel educativo",
+      "options": [
+        {
+          "option": "Primaria",
+          "explanation": "Has completado la educación primaria",
+          "points": 3
+        },
+        {
+          "option": "Secundaria",
+          "explanation": "Has completado la educación secundaria",
+          "points": 6
+        },
+        {
+          "option": "Universidad",
+          "explanation": "Has completado estudios universitarios",
+          "points": 10
+        },
+        {
+          "option": "Posgrado",
+          "explanation": "Has completado estudios de posgrado",
+          "points": 8
+        }
+      ]
+    },
+    {
+      "question": "¿Qué idiomas hablas?",
+      "hint": "Selecciona los idiomas que hablas",
+      "options": [
+        {
+          "option": "Inglés",
+          "explanation": "Hablas inglés",
+          "points": 8
+        },
+        {
+          "option": "Español",
+          "explanation": "Hablas español",
+          "points": 10
+        },
+        {
+          "option": "Francés",
+          "explanation": "Hablas francés",
+          "points": 6
+        },
+        {
+          "option": "Alemán",
+          "explanation": "Hablas alemán",
+          "points": 5
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es tu ocupación?",
+      "hint": "Selecciona tu ocupación actual",
+      "options": [
+        {
+          "option": "Estudiante",
+          "explanation": "Eres estudiante",
+          "points": 5
+        },
+        {
+          "option": "Empleado",
+          "explanation": "Eres empleado",
+          "points": 8
+        },
+        {
+          "option": "Emprendedor",
+          "explanation": "Eres emprendedor",
+          "points": 7
+        },
+        {
+          "option": "Desempleado",
+          "explanation": "Estás desempleado",
+          "points": 3
+        }
+      ]
+    }
+  ]
+}
