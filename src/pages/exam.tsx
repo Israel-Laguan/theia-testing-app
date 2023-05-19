@@ -14,6 +14,7 @@ const Exam = () => {
   const [selectedOptions, setSelectedOptions] = useState({})
   // Identificador de la pregunta actual
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [isOptionSelected, setIsoptionSelected] = useState(false);
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -62,9 +63,18 @@ const Exam = () => {
   }, [selectedOptions])
 
   const handleNextQuestion = (event: any) => {
-    event.preventDefault()
+    event.preventDefault();
+
+    // Validamos que el usuario haya seleccionado una opcion
+    if(!isOptionSelected) {
+      notifyError('Seleccione una opción')
+      return;
+    }
+
     // Pasamos a la siguiente pregunta
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    // Reseteamos el estado de la opcion seleccionada
+    setIsoptionSelected(false);
   }
 
   const surveyEnd = () => {
@@ -117,6 +127,7 @@ const Exam = () => {
                   name={questions[currentQuestionIndex].question}
                   value={option.option}
                   onChange={(event) => {
+                    setIsoptionSelected(true);
                     setSelectedOptions((prevOptions) => ({
                       ...prevOptions,
                       [questions[currentQuestionIndex].question]: event.target.value,
