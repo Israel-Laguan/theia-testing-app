@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { InfinitySpin } from 'react-loader-spinner'
-import { Loader } from './loader';
+import { Loader } from './loader'
 
 const Exam = () => {
   // Preguntas del JSON
@@ -23,9 +23,9 @@ const Exam = () => {
       const reader = new FileReader()
       reader.onload = (event: any) => {
         try {
-          const jsonData = JSON.parse(event.target.result);
+          const jsonData = JSON.parse(event.target.result)
           if (jsonData) {
-            notify('Cargado de manera satisfactoria');
+            notify('Cargado de manera satisfactoria')
 
             // Enviamos las preguntas al estado
             setQuestions(jsonData.questions)
@@ -53,8 +53,7 @@ const Exam = () => {
       loading ? 'Loading...' : 'Get a JSON'
     }
     console.log(`${loading ? 'Loading...' : 'Get a JSON'};`)
-    setLoading(true)
-    return 
+    setLoading(true);
   }
 
   useEffect(() => {
@@ -69,7 +68,6 @@ const Exam = () => {
   }
 
   const surveyEnd = () => {
-
     // Finalizamos la encuesta
     localStorage.setItem('surveyEnd', JSON.stringify(true))
 
@@ -94,7 +92,7 @@ const Exam = () => {
   }
 
   return (
-    <main className='main'>
+    <main className="main">
       <h1>Survey Data </h1>
       <input
         onClick={loadingInfo}
