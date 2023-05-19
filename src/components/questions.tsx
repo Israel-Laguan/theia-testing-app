@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { InfinitySpin } from  'react-loader-spinner'
-import { Loader } from './loader';
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { InfinitySpin } from 'react-loader-spinner'
+import { Loader } from './loader'
 
 const QuestionsForm = () => {
   // Preguntas del JSON
@@ -17,40 +16,39 @@ const QuestionsForm = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
 
   const handleGetJSON = async (event: any) => {
-    const file = event.target.files[0];
+    const file = event.target.files[0]
     if (file) {
       // console.log("File updated", file.name);
-      setLoading(true);
-      console.log(loading, "*** 01 Loading ***");
-      const reader = new FileReader();
+      setLoading(true)
+      console.log(loading, '*** 01 Loading ***')
+      const reader = new FileReader()
       reader.onload = (event: any) => {
         try {
-          const jsonData = JSON.parse(event.target.result);
+          const jsonData = JSON.parse(event.target.result)
           // console.log(jsonData, "JSON DATA ***");
           //console.log("Hello World!");
-          if(jsonData) {
+          if (jsonData) {
             let promise = new Promise((resolve, reject) => {
               // Ejecutar primero la funcion del spinner
-              notify("Cargado de manera satisfactoria");
-            });
+              notify('Cargado de manera satisfactoria')
+            })
 
             // Enviamos las preguntas al estado
-            setQuestions(jsonData.questions);
-            setSuccess(true); // JSON cargado de manera satisfactoria
+            setQuestions(jsonData.questions)
+            setSuccess(true) // JSON cargado de manera satisfactoria
           }
         } catch (error) {
-          notifyError("Archivo JSON Invalido");
-          setSuccess(false);
-          setError('JSON inválido');
+          notifyError('Archivo JSON Invalido')
+          setSuccess(false)
+          setError('JSON inválido')
           // setLoading(false);
         }
-        setLoading(false);
-
+        setLoading(false)
       }
 
       reader.onerror = () => {
-        console.log("TEST 00 ON READER ERROR");
-        setError('Error al leer el archivo');
+        console.log('TEST 00 ON READER ERROR')
+        setError('Error al leer el archivo')
       }
       // Leemos el archivo
       reader.readAsText(file)
@@ -60,7 +58,6 @@ const QuestionsForm = () => {
   const loadingInfo = () => {
     {
       loading ? 'Loading...' : 'Get a JSON'
-      
     }
     console.log(`${loading ? 'Loading...' : 'Get a JSON'};`)
     setLoading(true)
@@ -79,36 +76,36 @@ const QuestionsForm = () => {
   }
 
   const surveyEnd = () => {
-    console.log('Encuesta finalizada');
+    console.log('Encuesta finalizada')
 
-    // Finalizamos la encuesta 
+    // Finalizamos la encuesta
     localStorage.setItem('surveyEnd', JSON.stringify(true))
     // Redireccionamos a la pagina de resultados
-    
-    window.location.href = '/exam'; // Pending
+
+    window.location.href = '/exam' // Pending
   }
 
   const notify = (message: string) => {
     toast.success(message, {
-      position: "top-center",
+      position: 'top-center',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       draggable: true,
-    });
+    })
     // console.log("JSON cargado de manera satisfactoria");
-  };
+  }
 
   const notifyError = (message: string) => {
     toast.error(message, {
-      position: "top-center",
+      position: 'top-center',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       draggable: true,
-    });
+    })
     // console.log("Error al cargar el JSON");
-  };
+  }
 
   return (
     <div>
@@ -150,7 +147,9 @@ const QuestionsForm = () => {
           <button type="submit">Siguiente</button>
         </form>
       ) : (
-        <button onClick={surveyEnd}  type="button">Finalizar</button>
+        <button onClick={surveyEnd} type="button">
+          Finalizar
+        </button>
       )}
       <ToastContainer />
     </div>
