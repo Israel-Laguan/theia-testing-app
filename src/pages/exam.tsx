@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
@@ -14,6 +14,7 @@ const Exam = () => {
   // Identificador de la pregunta actual
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
+  const fileRef = useRef()
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -112,7 +113,7 @@ const Exam = () => {
         type="file"
       />
       {loading ? <Loader /> : null}
-      {error ? error : <p>{success }</p>}
+      {error ? error : <p>{success}</p>}
       {questions.length > 0 && currentQuestionIndex < questions.length ? (
         <form id="surveyForm" onSubmit={handleNextQuestion}>
           {success ? success : error}
