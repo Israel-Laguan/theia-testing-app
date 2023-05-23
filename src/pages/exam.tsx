@@ -20,7 +20,6 @@ const Exam = () => {
     const file = event.target.files[0]
     if (file) {
       setLoading(true)
-      console.log(loading, '*** 01 Loading ***')
       const reader = new FileReader()
       reader.onload = (event: any) => {
         try {
@@ -53,7 +52,6 @@ const Exam = () => {
     {
       loading ? 'Loading...' : 'Get a JSON'
     }
-    console.log(`${loading ? 'Loading...' : 'Get a JSON'};`)
     setLoading(true)
   }
 
