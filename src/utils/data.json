@@ -1,0 +1,59 @@
+{
+  "name": "string",
+  "maxPointsPossible": "number",
+  "description": "Hello World!",
+  "questions": [
+    {
+      "question": "¿De que pais eres?",
+      "hint": "USA, CO, ESP?",
+      "options": [
+        {
+          "option": "Colombia",
+          "explanation": "string",
+          "points": "number"
+        },
+        {
+          "option": "United States",
+          "explanation": "USA",
+          "points": "number"
+        },
+        {
+          "option": "France",
+          "explanation": "FR",
+          "points": "number"
+        },
+        {
+          "option": "Bolivia",
+          "explanation": "BOL",
+          "points": "number"
+        }
+      ]
+    },
+    {
+      "question": "¿Que edad tienes?",
+      "hint": "20, 25, 30, etc",
+      "options": [
+        {
+          "option": "18-22",
+          "explanation": "string",
+          "points": "number"
+        },
+        {
+          "option": "23-27",
+          "explanation": "AGE",
+          "points": "number"
+        },
+        {
+          "option": "28-31",
+          "explanation": "age",
+          "points": "number"
+        },
+        {
+          "option": "32+",
+          "explanation": "Senior",
+          "points": "number"
+        }
+      ]
+    }
+  ]
+}
