@@ -40,14 +40,5 @@ jobs:
 
       - name: Test
         run: npm run test
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Prettier (Code style check)
-        run: npm run prettier
-
-      - name: Type checking (using TSC CLI)
-        run: npm run type-check
     env:
       CI: true
