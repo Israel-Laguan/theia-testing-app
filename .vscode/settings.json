@@ -44,6 +44,7 @@
   ],
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
+    "nextjs",
     "testid"
   ],
 }
