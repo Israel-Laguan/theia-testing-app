@@ -1,20 +1,35 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
 
+type QuestionOption = {
+  option: string
+  explanation: string
+  points: number
+}
+
+type Question = {
+  question: string
+  hint: string
+  options: QuestionOption[]
+}
+
+type FormData = {
+  name: string
+  maxPointsPossible: number
+  description: string
+  questions: Question[]
+}
+
 const Exam = () => {
-  // Preguntas del JSON
-  const [questions, setQuestions] = useState([])
+  const [questions, setQuestions] = useState<Question[] | []>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
-  // Opciones seleccionadas por el usuario
   const [selectedOptions, setSelectedOptions] = useState({})
-  // Identificador de la pregunta actual
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
-  const fileRef = useRef()
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -27,15 +42,13 @@ const Exam = () => {
           if (jsonData) {
             notify('Cargado de manera satisfactoria')
 
-            // Enviamos las preguntas al estado
             setQuestions(jsonData.questions)
-            setSuccess(true) // JSON cargado de manera satisfactoria
+            setSuccess(true)
           }
         } catch (error) {
           notifyError('Archivo JSON Invalido')
           setSuccess(false)
           setError('JSON inválido')
-          // setLoading(false);
         }
         setLoading(false)
       }
@@ -43,7 +56,6 @@ const Exam = () => {
       reader.onerror = () => {
         setError('Error al leer el archivo')
       }
-      // Leemos el archivo
       reader.readAsText(file)
     }
   }
@@ -56,30 +68,24 @@ const Exam = () => {
   }
 
   useEffect(() => {
-    // Guardamos cada seleccion del input
     let data = localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
   }, [selectedOptions])
 
   const handleNextQuestion = (event: any) => {
     event.preventDefault()
 
-    // Validamos que el usuario haya seleccionado una opcion
     if (!isOptionSelected) {
       notifyError('Seleccione una opción')
       return
     }
 
-    // Pasamos a la siguiente pregunta
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
-    // Reseteamos el estado de la opcion seleccionada
     setIsoptionSelected(false)
   }
 
   const surveyEnd = () => {
-    // Finalizamos la encuesta
     localStorage.setItem('surveyEnd', JSON.stringify(true))
 
-    // Redireccionamos a la pagina de resultados
     window.location.href = '/exam' // Pending
   }
 
@@ -117,7 +123,6 @@ const Exam = () => {
           {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
-            {/* Render question options */}
             {questions[currentQuestionIndex].options.map((option: any, k2) => (
               <li className="surveyF" key={k2}>
                 <input
