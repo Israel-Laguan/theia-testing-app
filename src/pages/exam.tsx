@@ -73,6 +73,7 @@ const Exam = () => {
   const handlePreviousQuestion = (event: any) => {
     event.preventDefault()
     setCurrentQuestionIndex((prevIndex) => prevIndex - 1)
+    setIsoptionSelected(true)
   }
 
   const handleNextQuestion = (event: any) => {
@@ -131,12 +132,16 @@ const Exam = () => {
           {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
-            {questions[currentQuestionIndex].options.map((option: any, k2) => (
+            {questions[currentQuestionIndex].options.map((option: any, k2: any) => (
               <li className="surveyF" key={k2}>
                 <input
                   type="radio"
                   name={questions[currentQuestionIndex].question}
                   value={option.option}
+                  checked={
+                    selectedOptions[questions[currentQuestionIndex].question] === option.option ||
+                    false
+                  }
                   onChange={(event) => {
                     setIsoptionSelected(true)
                     setSelectedOptions((prevOptions) => ({
