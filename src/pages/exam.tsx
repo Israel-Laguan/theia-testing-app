@@ -30,7 +30,6 @@ const Exam = () => {
   const [selectedOptions, setSelectedOptions] = useState({})
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
-
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
     if (file) {
@@ -151,21 +150,21 @@ const Exam = () => {
             ))}
           </div>
           <div>
-            {currentQuestionIndex > 0 ? (
+            {currentQuestionIndex > 0 && (
               <button onClick={handlePreviousQuestion} type="submit">
                 Anterior
               </button>
-            ) : null}
-            {questions.length > 0 && currentQuestionIndex < questions.length - 1 ? (
+            )}
+            {questions.length > 0 && currentQuestionIndex < questions.length - 1 && (
               <button onClick={handleNextQuestion} type="submit">
                 Siguiente
               </button>
-            ) : null}
-            {currentQuestionIndex === questions.length - 1 ? (
+            )}
+            {currentQuestionIndex === questions.length - 1 && (
               <button onClick={surveyEnd} type="button">
                 Finalizar
               </button>
-            ) : null}
+            )}
           </div>
         </form>
       ) : null}
