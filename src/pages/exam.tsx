@@ -30,7 +30,6 @@ const Exam = () => {
   const [selectedOptions, setSelectedOptions] = useState({})
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
-  const [back, setBack] = useState(false)
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
