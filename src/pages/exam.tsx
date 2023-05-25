@@ -30,6 +30,7 @@ const Exam = () => {
   const [selectedOptions, setSelectedOptions] = useState({})
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
+  const [back, setBack] = useState(false)
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -71,6 +72,11 @@ const Exam = () => {
     let data = localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
   }, [selectedOptions])
 
+  const handlePreviousQuestion = (event: any) => {
+    event.preventDefault()
+    setCurrentQuestionIndex((prevIndex) => prevIndex - 1)
+  }
+
   const handleNextQuestion = (event: any) => {
     event.preventDefault()
 
@@ -86,6 +92,10 @@ const Exam = () => {
   const surveyEnd = () => {
     localStorage.setItem('surveyEnd', JSON.stringify(true))
 
+    if (!isOptionSelected) {
+      notifyError('¡Selecciona la respuesta!')
+      return
+    }
     window.location.href = '/exam' // Pending
   }
 
@@ -119,7 +129,7 @@ const Exam = () => {
       {loading ? <Loader /> : null}
       {error ? error : <p>{success}</p>}
       {questions.length > 0 && currentQuestionIndex < questions.length ? (
-        <form id="surveyForm" onSubmit={handleNextQuestion}>
+        <form id="surveyForm">
           {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
@@ -141,13 +151,25 @@ const Exam = () => {
               </li>
             ))}
           </div>
-          <button type="submit">Siguiente</button>
+          <div>
+            {currentQuestionIndex > 0 ? (
+              <button onClick={handlePreviousQuestion} type="submit">
+                Anterior
+              </button>
+            ) : null}
+            {questions.length > 0 && currentQuestionIndex < questions.length - 1 ? (
+              <button onClick={handleNextQuestion} type="submit">
+                Siguiente
+              </button>
+            ) : null}
+            {currentQuestionIndex === questions.length - 1 ? (
+              <button onClick={surveyEnd} type="button">
+                Finalizar
+              </button>
+            ) : null}
+          </div>
         </form>
-      ) : (
-        <button onClick={surveyEnd} type="button">
-          Finalizar
-        </button>
-      )}
+      ) : null}
       <ToastContainer />
     </main>
   )
