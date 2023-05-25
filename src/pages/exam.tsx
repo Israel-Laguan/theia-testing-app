@@ -82,10 +82,17 @@ const Exam = () => {
     if (!isOptionSelected) {
       notifyError('Seleccione una opción')
       return
+    } else {
+      const isOptionSelected =
+        selectedOptions[
+          questions[currentQuestionIndex + 1].question as keyof typeof selectedOptions
+        ]
+      {
+        isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)
+      }
     }
 
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
-    setIsoptionSelected(false)
   }
 
   const surveyEnd = () => {
@@ -139,8 +146,9 @@ const Exam = () => {
                   name={questions[currentQuestionIndex].question}
                   value={option.option}
                   checked={
-                    selectedOptions[questions[currentQuestionIndex].question] === option.option ||
-                    false
+                    selectedOptions[
+                      questions[currentQuestionIndex].question as keyof typeof selectedOptions
+                    ] === option.option || false
                   }
                   onChange={(event) => {
                     setIsoptionSelected(true)
