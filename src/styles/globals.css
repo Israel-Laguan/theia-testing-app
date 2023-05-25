@@ -68,6 +68,10 @@ main ul {
 }
 
 main button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
   margin: 0.5rem 0;
   border: 1px solid #d52c2c;
@@ -99,4 +103,26 @@ h1 {
   font-weight: 700;
   margin-bottom: 1rem;
   color: #d52c2c;
+}
+
+#surveyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#surveyForm > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+#surveyForm > div:nth-child(2) button {
+  padding: 0.5rem;
+  margin: 0 0.25rem;
+
 }
