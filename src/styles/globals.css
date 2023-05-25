@@ -64,7 +64,6 @@ main ul {
   font-weight: 700;
   color: #000000;
   border-bottom: blue 1px solid;
-  
 }
 
 main button {
@@ -124,5 +123,4 @@ h1 {
 #surveyForm > div:nth-child(2) button {
   padding: 0.5rem;
   margin: 0 0.25rem;
-
 }
