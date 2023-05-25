@@ -83,13 +83,8 @@ const Exam = () => {
       notifyError('Seleccione una opción')
       return
     } else {
-      const isOptionSelected =
-        selectedOptions[
-          questions[currentQuestionIndex + 1].question as keyof typeof selectedOptions
-        ]
-      {
-        isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)
-      }
+      const isOptionSelected = selectedOptions[questions[currentQuestionIndex + 1].question as keyof typeof selectedOptions]
+      {isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)}
     }
 
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
@@ -134,22 +129,18 @@ const Exam = () => {
       />
       {loading ? <Loader /> : null}
       {error ? error : <p>{success}</p>}
-      {questions.length > 0 && currentQuestionIndex < questions.length ? (
+      {questions.length > 0 &&  (
         <form id="surveyForm">
           {success ? success : error}
           <div key={currentQuestionIndex}>
             <ul>{questions[currentQuestionIndex].question}</ul>
-            {questions[currentQuestionIndex].options.map((option: any, k2: any) => (
+            {questions[currentQuestionIndex].options.map((option: any, k2: number) => (
               <li className="surveyF" key={k2}>
                 <input
                   type="radio"
                   name={questions[currentQuestionIndex].question}
                   value={option.option}
-                  checked={
-                    selectedOptions[
-                      questions[currentQuestionIndex].question as keyof typeof selectedOptions
-                    ] === option.option || false
-                  }
+                  checked={selectedOptions[questions[currentQuestionIndex].question as keyof typeof selectedOptions] === option.option || false}                  
                   onChange={(event) => {
                     setIsoptionSelected(true)
                     setSelectedOptions((prevOptions) => ({
@@ -165,22 +156,22 @@ const Exam = () => {
           <div>
             {currentQuestionIndex > 0 && (
               <button onClick={handlePreviousQuestion} type="submit">
-                Anterior
+                Before
               </button>
             )}
             {questions.length > 0 && currentQuestionIndex < questions.length - 1 && (
               <button onClick={handleNextQuestion} type="submit">
-                Siguiente
+                Next
               </button>
             )}
             {currentQuestionIndex === questions.length - 1 && (
               <button onClick={surveyEnd} type="button">
-                Finalizar
+                Finish
               </button>
             )}
           </div>
         </form>
-      ) : null}
+      )}
       <ToastContainer />
     </main>
   )
