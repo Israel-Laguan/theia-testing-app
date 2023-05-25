@@ -83,8 +83,13 @@ const Exam = () => {
       notifyError('Seleccione una opción')
       return
     } else {
-      const isOptionSelected = selectedOptions[questions[currentQuestionIndex + 1].question as keyof typeof selectedOptions]
-      {isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)}
+      const isOptionSelected =
+        selectedOptions[
+          questions[currentQuestionIndex + 1].question as keyof typeof selectedOptions
+        ]
+      {
+        isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)
+      }
     }
 
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
@@ -129,7 +134,7 @@ const Exam = () => {
       />
       {loading ? <Loader /> : null}
       {error ? error : <p>{success}</p>}
-      {questions.length > 0 &&  (
+      {questions.length > 0 && (
         <form id="surveyForm">
           {success ? success : error}
           <div key={currentQuestionIndex}>
@@ -140,7 +145,11 @@ const Exam = () => {
                   type="radio"
                   name={questions[currentQuestionIndex].question}
                   value={option.option}
-                  checked={selectedOptions[questions[currentQuestionIndex].question as keyof typeof selectedOptions] === option.option || false}                  
+                  checked={
+                    selectedOptions[
+                      questions[currentQuestionIndex].question as keyof typeof selectedOptions
+                    ] === option.option || false
+                  }
                   onChange={(event) => {
                     setIsoptionSelected(true)
                     setSelectedOptions((prevOptions) => ({
