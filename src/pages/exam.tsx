@@ -132,7 +132,7 @@ const Exam = () => {
       }
     })
 
-    localStorage.setItem('points', JSON.stringify(points))
+    localStorage.setItem('points', JSON.stringify(average))
     setResult(average)
     window.location.href = '/results' // Pending
   }
