@@ -1,7 +1,7 @@
 {
-    "name": "string",
-    "maxPointsPossible": "number",
-    "description": "Hello World!",
+    "name": "Test about Software Development",
+    "maxPointsPossible": 10,
+    "description": "This is a test about Software Development",
     "questions": [
       {
         "question": "¿De qué país eres?",
@@ -10,22 +10,22 @@
           {
             "option": "Colombia",
             "explanation": "string",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "United States",
             "explanation": "USA",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "France",
             "explanation": "FR",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Bolivia",
             "explanation": "BOL",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -36,22 +36,22 @@
           {
             "option": "18-22",
             "explanation": "string",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "23-27",
             "explanation": "AGE",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "28-31",
             "explanation": "age",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "32+",
             "explanation": "Senior",
-            "points": "number"
+            "points": 10
           }
         ]
       },
@@ -62,22 +62,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -88,22 +88,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -114,22 +114,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -140,22 +140,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 10
           }
         ]
       },
@@ -166,22 +166,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -192,22 +192,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -218,22 +218,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -244,22 +244,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -270,22 +270,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -296,22 +296,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -322,22 +322,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -348,22 +348,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 10
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 0
           }
         ]
       },
@@ -374,22 +374,22 @@
           {
             "option": "Básico",
             "explanation": "Nivel básico",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Intermedio",
             "explanation": "Nivel intermedio",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Avanzado",
             "explanation": "Nivel avanzado",
-            "points": "number"
+            "points": 0
           },
           {
             "option": "Experto",
             "explanation": "Nivel experto",
-            "points": "number"
+            "points": 10
           }
         ]
       }
