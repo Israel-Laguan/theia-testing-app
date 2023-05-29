@@ -40,7 +40,7 @@ const Exam = () => {
           const jsonData = JSON.parse(event.target.result)
           if (jsonData) {
             notify('Cargado de manera satisfactoria')
-
+            localStorage.removeItem('surveyEnd')
             setQuestions(jsonData.questions)
             setSuccess(true)
           }
