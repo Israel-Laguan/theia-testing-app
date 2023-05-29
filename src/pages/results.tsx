@@ -7,10 +7,8 @@ export default function Results() {
 
     return(
         <div>
-            <ResultContext.Provider value={result}>
-                <h1>Results</h1>
-                {result}
-            </ResultContext.Provider>
+            <h1>Results</h1>
+            {result}
         </div>
     );
 }
