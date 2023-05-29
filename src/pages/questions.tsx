@@ -24,7 +24,7 @@ type FormData = {
   questions: Question[]
 }
 
-const Exam = () => {
+const Questions = ({children}) => {
   const [questions, setQuestions] = useState<Question[] | []>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -215,6 +215,7 @@ const Exam = () => {
           </div>
           <Results />
         </form>
+
       )}
       <ToastContainer />
     </main>
@@ -222,4 +223,4 @@ const Exam = () => {
   )
 }
 
-export default Exam;
+export default Questions;
