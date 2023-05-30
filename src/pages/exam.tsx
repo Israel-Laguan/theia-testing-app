@@ -83,20 +83,6 @@ const Exam = () => {
 
   const handleNextQuestion = (event: any) => {
     event.preventDefault()
-
-    let points = 0;
-    let average = 0;
-    questions.forEach((question: Question) => {
-      const selectedOption = selectedOptions[question.question as keyof typeof selectedOptions]
-      const correctOption = question.options.find((option) => option.points > 0)
-      if (selectedOption === correctOption?.option) {
-        points += correctOption.points;
-        average = points / questions.length;
-      }
-    })
-
-    setResult(average)
-
     if (!isOptionSelected) {
       notifyError('Seleccione una opción')
       return
@@ -213,7 +199,6 @@ const Exam = () => {
               </button>
             )}
           </div>
-          <Results />
         </form>
       )}
       <ToastContainer />
