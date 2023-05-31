@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 
 const Modal = ({ onClose, children }: any) => {
-  const modalRef = useRef(null)
+  const modalRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleClickOutside = (event: any) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         onClose()
       }
     }
