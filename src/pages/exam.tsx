@@ -125,10 +125,8 @@ const Exam = () => {
       return
     }
 
-    console.log('Clicked')
     surveyResults()
     setShowModal(true)
-    //window.location.href = '/results' // Pending
   }
 
   const notify = (message: string) => {
