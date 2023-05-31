@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
 import { ResultContext } from '../utils/ResultContext'
 import Results from './results'
-import TestForm from './TestForm'
+import TestForm from '../components/form'
 
 type QuestionOption = {
   option: string
