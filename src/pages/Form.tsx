@@ -6,7 +6,7 @@ export default function Form({
   setIsoptionSelected,
   handlePreviousQuestion,
   handleNextQuestion,
-  surveyEnd
+  surveyEnd,
 }: any) {
   return (
     <form id="surveyForm">
