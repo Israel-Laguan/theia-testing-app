@@ -34,7 +34,7 @@ const Exam = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
   const [result, setResult] = useState(0)
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -125,7 +125,7 @@ const Exam = () => {
       return
     }
 
-    console.log('Clicked');
+    console.log('Clicked')
     surveyResults()
     setShowModal(true)
     //window.location.href = '/results' // Pending
@@ -179,10 +179,12 @@ const Exam = () => {
           />
         )}
         {showModal && (
-          <Modal onClose={() => {
-            setShowModal(false);
-            return window.location.href = '/exam';
-          }}>
+          <Modal
+            onClose={() => {
+              setShowModal(false)
+              return (window.location.href = '/exam')
+            }}
+          >
             <h2>Test result</h2>
             <p>Your score: {result}</p>
           </Modal>
