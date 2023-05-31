@@ -3,8 +3,8 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
 import { ResultContext } from '../utils/ResultContext'
-import Results from './results'
 import Form from '../components/form'
+import Modal from '../components/ResultsModal'
 
 type QuestionOption = {
   option: string
@@ -34,6 +34,7 @@ const Exam = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
   const [result, setResult] = useState(0)
+  const [showModal, setShowModal] = useState(false);
 
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
@@ -124,7 +125,9 @@ const Exam = () => {
       return
     }
 
+    console.log('Clicked');
     surveyResults()
+    setShowModal(true)
     //window.location.href = '/results' // Pending
   }
 
@@ -174,6 +177,15 @@ const Exam = () => {
             handleNextQuestion={handleNextQuestion}
             surveyEnd={surveyEnd}
           />
+        )}
+        {showModal && (
+          <Modal onClose={() => {
+            setShowModal(false);
+            return window.location.href = '/exam';
+          }}>
+            <h2>Test result</h2>
+            <p>Your score: {result}</p>
+          </Modal>
         )}
         <ToastContainer />
       </main>
