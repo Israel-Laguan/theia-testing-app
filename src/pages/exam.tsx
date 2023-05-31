@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
 import { ResultContext } from '../utils/ResultContext'
 import Results from './results'
+import Form from './Form'
 
 type QuestionOption = {
   option: string
@@ -95,18 +96,11 @@ const Exam = () => {
         isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)
       }
     }
-
+    surveyResults()
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
   }
 
-  const surveyEnd = () => {
-    localStorage.setItem('surveyEnd', JSON.stringify(true))
-
-    if (!isOptionSelected) {
-      notifyError('¡Selecciona la respuesta!')
-      return
-    }
-
+  const surveyResults = () => {
     let points = 0
     let average = 0
     questions.forEach((question: Question) => {
@@ -120,7 +114,18 @@ const Exam = () => {
 
     localStorage.setItem('points', JSON.stringify(average))
     setResult(average)
-    window.location.href = '/results' // Pending
+  }
+
+  const surveyEnd = () => {
+    localStorage.setItem('surveyEnd', JSON.stringify(true))
+
+    if (!isOptionSelected) {
+      notifyError('¡Selecciona la respuesta!')
+      return
+    }
+
+    surveyResults()
+    //window.location.href = '/results' // Pending
   }
 
   const notify = (message: string) => {
@@ -143,7 +148,7 @@ const Exam = () => {
     <ResultContext.Provider value={result}>
       <main className="main">
         <h1>Survey Data </h1>
-        <p> {result} Principal component</p>
+        <p className="text-sky-400 shadow-inner"> Your score: {result}</p>
         <input
           onClick={loadingInfo}
           onChange={handleGetJSON}
@@ -155,51 +160,20 @@ const Exam = () => {
         {loading ? <Loader /> : null}
         {error ? error : <p>{success}</p>}
         {questions.length > 0 && (
-          <form id="surveyForm">
-            {success ? success : error}
-            <div key={currentQuestionIndex}>
-              <ul>{questions[currentQuestionIndex].question}</ul>
-              {questions[currentQuestionIndex].options.map((option: any, k2: number) => (
-                <li className="surveyF" key={k2}>
-                  <input
-                    type="radio"
-                    name={questions[currentQuestionIndex].question}
-                    value={option.option}
-                    checked={
-                      selectedOptions[
-                        questions[currentQuestionIndex].question as keyof typeof selectedOptions
-                      ] === option.option || false
-                    }
-                    onChange={(event) => {
-                      setIsoptionSelected(true)
-                      setSelectedOptions((prevOptions) => ({
-                        ...prevOptions,
-                        [questions[currentQuestionIndex].question]: event.target.value,
-                      }))
-                    }}
-                  />
-                  {option.option}
-                </li>
-              ))}
-            </div>
-            <div>
-              {currentQuestionIndex > 0 && (
-                <button onClick={handlePreviousQuestion} type="submit">
-                  Before
-                </button>
-              )}
-              {questions.length > 0 && currentQuestionIndex < questions.length - 1 && (
-                <button onClick={handleNextQuestion} type="submit">
-                  Next
-                </button>
-              )}
-              {currentQuestionIndex === questions.length - 1 && (
-                <button onClick={surveyEnd} type="button">
-                  Finish
-                </button>
-              )}
-            </div>
-          </form>
+          <Form
+            success={success}
+            questions={questions}
+            selectedOptions={selectedOptions}
+            setSelectedOptions={setSelectedOptions}
+            currentQuestionIndex={currentQuestionIndex}
+            setCurrentQuestionIndex={setCurrentQuestionIndex}
+            isOptionSelected={isOptionSelected}
+            setIsoptionSelected={setIsoptionSelected}
+            surveyResults={surveyResults}
+            handlePreviousQuestion={handlePreviousQuestion}
+            handleNextQuestion={handleNextQuestion}
+            surveyEnd={surveyEnd}
+          />
         )}
         <ToastContainer />
       </main>
