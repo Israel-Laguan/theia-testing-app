@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
 import { ResultContext } from '../utils/ResultContext'
 import Results from './results'
-import TestForm from '../components/form'
+import Form from '../components/Form'
 
 type QuestionOption = {
   option: string
@@ -160,7 +160,7 @@ const Exam = () => {
         {loading ? <Loader /> : null}
         {error ? error : <p>{success}</p>}
         {questions.length > 0 && (
-          <TestForm
+          <Form
             success={success}
             questions={questions}
             selectedOptions={selectedOptions}
