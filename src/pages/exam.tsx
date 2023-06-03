@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Loader } from '../components/loader'
+import { ResultContext } from '../utils/ResultContext'
+import Form from '../components/form'
+import Modal from '../components/ResultsModal'
 
 type QuestionOption = {
   option: string
@@ -30,6 +33,9 @@ const Exam = () => {
   const [selectedOptions, setSelectedOptions] = useState({})
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [isOptionSelected, setIsoptionSelected] = useState(false)
+  const [result, setResult] = useState(0)
+  const [showModal, setShowModal] = useState(false)
+
   const handleGetJSON = async (event: any) => {
     const file = event.target.files[0]
     if (file) {
@@ -40,7 +46,8 @@ const Exam = () => {
           const jsonData = JSON.parse(event.target.result)
           if (jsonData) {
             notify('Cargado de manera satisfactoria')
-
+            localStorage.removeItem('surveyEnd')
+            localStorage.removeItem('points')
             setQuestions(jsonData.questions)
             setSuccess(true)
           }
@@ -78,7 +85,6 @@ const Exam = () => {
 
   const handleNextQuestion = (event: any) => {
     event.preventDefault()
-
     if (!isOptionSelected) {
       notifyError('Seleccione una opción')
       return
@@ -91,8 +97,24 @@ const Exam = () => {
         isOptionSelected ? setIsoptionSelected(true) : setIsoptionSelected(false)
       }
     }
-
+    surveyResults()
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
+  }
+
+  const surveyResults = () => {
+    let points = 0
+    let average = 0
+    questions.forEach((question: Question) => {
+      const selectedOption = selectedOptions[question.question as keyof typeof selectedOptions]
+      const correctOption = question.options.find((option) => option.points > 0)
+      if (selectedOption === correctOption?.option) {
+        points += correctOption.points
+        average = points / questions.length
+      }
+    })
+
+    localStorage.setItem('points', JSON.stringify(average))
+    setResult(average)
   }
 
   const surveyEnd = () => {
@@ -102,7 +124,9 @@ const Exam = () => {
       notifyError('¡Selecciona la respuesta!')
       return
     }
-    window.location.href = '/exam' // Pending
+
+    surveyResults()
+    setShowModal(true)
   }
 
   const notify = (message: string) => {
@@ -122,67 +146,50 @@ const Exam = () => {
   }
 
   return (
-    <main className="main">
-      <h1>Survey Data </h1>
-      <input
-        onClick={loadingInfo}
-        onChange={handleGetJSON}
-        id="jsondata"
-        name="userData"
-        accept=".json"
-        type="file"
-      />
-      {loading ? <Loader /> : null}
-      {error ? error : <p>{success}</p>}
-      {questions.length > 0 && (
-        <form id="surveyForm">
-          {success ? success : error}
-          <div key={currentQuestionIndex}>
-            <ul>{questions[currentQuestionIndex].question}</ul>
-            {questions[currentQuestionIndex].options.map((option: any, k2: number) => (
-              <li className="surveyF" key={k2}>
-                <input
-                  type="radio"
-                  name={questions[currentQuestionIndex].question}
-                  value={option.option}
-                  checked={
-                    selectedOptions[
-                      questions[currentQuestionIndex].question as keyof typeof selectedOptions
-                    ] === option.option || false
-                  }
-                  onChange={(event) => {
-                    setIsoptionSelected(true)
-                    setSelectedOptions((prevOptions) => ({
-                      ...prevOptions,
-                      [questions[currentQuestionIndex].question]: event.target.value,
-                    }))
-                  }}
-                />
-                {option.option}
-              </li>
-            ))}
-          </div>
-          <div>
-            {currentQuestionIndex > 0 && (
-              <button onClick={handlePreviousQuestion} type="submit">
-                Before
-              </button>
-            )}
-            {questions.length > 0 && currentQuestionIndex < questions.length - 1 && (
-              <button onClick={handleNextQuestion} type="submit">
-                Next
-              </button>
-            )}
-            {currentQuestionIndex === questions.length - 1 && (
-              <button onClick={surveyEnd} type="button">
-                Finish
-              </button>
-            )}
-          </div>
-        </form>
-      )}
-      <ToastContainer />
-    </main>
+    <ResultContext.Provider value={result}>
+      <main className="main">
+        <h1>Survey Data </h1>
+        <p className="text-sky-400 shadow-inner"> Your score: {result}</p>
+        <input
+          onClick={loadingInfo}
+          onChange={handleGetJSON}
+          id="jsondata"
+          name="userData"
+          accept=".json"
+          type="file"
+        />
+        {loading ? <Loader /> : null}
+        {error ? error : <p>{success}</p>}
+        {questions.length > 0 && (
+          <Form
+            success={success}
+            questions={questions}
+            selectedOptions={selectedOptions}
+            setSelectedOptions={setSelectedOptions}
+            currentQuestionIndex={currentQuestionIndex}
+            setCurrentQuestionIndex={setCurrentQuestionIndex}
+            isOptionSelected={isOptionSelected}
+            setIsoptionSelected={setIsoptionSelected}
+            surveyResults={surveyResults}
+            handlePreviousQuestion={handlePreviousQuestion}
+            handleNextQuestion={handleNextQuestion}
+            surveyEnd={surveyEnd}
+          />
+        )}
+        {showModal && (
+          <Modal
+            onClose={() => {
+              setShowModal(false)
+              return (window.location.href = '/exam')
+            }}
+          >
+            <h2>Test result</h2>
+            <p>Your score: {result}</p>
+          </Modal>
+        )}
+        <ToastContainer />
+      </main>
+    </ResultContext.Provider>
   )
 }
 
