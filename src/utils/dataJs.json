@@ -1,0 +1,112 @@
+{
+    "name": "Cuestionario",
+    "maxPointsPossible": 100,
+    "description": "Este cuestionario es para saber tus conocimientos sobre el lenguaje de Javascript",
+    "questions": [
+        {
+            "question": "¿Qué operador devuelve verdadero si los dos valores comparados no son iguales?",
+            "hint": "Selecciona la respuesta correcta",
+            "options": [
+                {
+                    "option": "<>",
+                    "explanation": "Estos son signos de comparacion mayor o menor",
+                    "points": 0
+                },
+                {
+                    "option": "~",
+                    "explanation": "Signo virgulilla",
+                    "points": 1
+                },
+                {
+                    "option": "==!",
+                    "explanation": "Estructura correcta pero no es la indicada",
+                    "points": 2
+                },
+                {
+                    "option": "!==",
+                    "explanation": "Estructura correcta y comparacion correcta",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "¿Cuál enunciado es la forma correcta de crear una variable llamada tasa y asignarle el valor 100?",
+            "hint": "Selecciona la respuesta correcta",
+            "options": [
+                {
+                    "option": "let rate = 100;",
+                    "explanation": "Forma correcta",
+                    "points": 3
+                },
+                {
+                    "option": "let 100 = rate;",
+                    "explanation": "Estructura correcta pero no es la forma",
+                    "points": 1
+                },
+                {
+                    "option": "100 = let rate;",
+                    "explanation": "No es lo correcto",
+                    "points": 0
+                },
+                {
+                    "option": "rate = 100;",
+                    "explanation": "Estructura correcta pero le falta algo",
+                    "points": 2
+                }
+            ]
+        },
+        //TODO: agregar codigo de la creacion de una funcion
+        {
+            "question": "¿Qué declaración crea una nueva función llamada precioDescuento?",
+            "hint": "Selecciona la respuesta correcta",
+            "options": [
+                {
+                    "option": "",
+                    "explanation": "",
+                    "points": 0
+                },
+                {
+                    "option": "",
+                    "explanation": "",
+                    "points": 0
+                },
+                {
+                    "option": "",
+                    "explanation": "",
+                    "points": 0
+                },
+                {
+                    "option": "",
+                    "explanation": "",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "¿Qué método convierte los datos JSON en un objeto JavaScript?",
+            "hint": "Selecciona la respuesta correcta",
+            "options": [
+                {
+                    "option": "JSON.fromString();",
+                    "explanation": "",
+                    "points": 0
+                },
+                {
+                    "option": "JSON.parse();",
+                    "explanation": "Se utiliza para convertir una cadena JSON en un objeto",
+                    "points": 3
+                },
+                {
+                    "option": "JSON.toObject();",
+                    "explanation": "",
+                    "points": 1
+                },
+                {
+                    "option": "JSON.stringify();",
+                    "explanation": "Se utiliza para convertir un objeto JavaScript en una cadena JSON.",
+                    "points": 2
+                }
+            ]
+        }
+    ]
+}

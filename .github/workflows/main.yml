@@ -24,24 +24,23 @@ jobs:
 
       - name: Cache node modules
         uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-          cache-dependency-path: ./package-lock.json
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
             
       - name: Install Dependencies
         run: npm ci
 
-      - name: Lint
+      - name: Lint (Check against Eslint rules for code quality)
         run: npm run lint
-      - name: Prettier - server
+      - name: Prettier (Code style check)
         run: npm run prettier
+      - name: Type checking (using TSC CLI)
+        run: npm run type-check
       - name: All went well!
         run: echo Success
     env:
@@ -64,20 +63,18 @@ jobs:
 
       - name: Cache node modules
         uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-          cache-dependency-path: ./package-lock.json
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
             
       - name: Install Dependencies
         run: npm ci
       - name: Build Dependencies
-        run: npm ci
+        run: npm run build
         env:
           NODE_ENV: production
+          NEXT_TELEMETRY_DEBUG: 1

@@ -1,0 +1,25 @@
+{
+	"name": "Theia",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "npm install",
+	"postAttachCommand": "npm run dev",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"DavidAnson.vscode-markdownlint",
+				"ms-vscode-remote.remote-containers"
+			]
+		}
+	},
+	"portsAttributes": {
+		"3000": {
+			"label": "Application",
+			"onAutoForward": "openPreview"
+		}
+	},
+	"forwardPorts": [3000]
+}
