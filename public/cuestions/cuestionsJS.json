@@ -1,0 +1,527 @@
+{
+    "name": "Questionnaire",
+    "maxPointsPossible": 100,
+    "description": "This quiz is to know your knowledge about the Javascript language",
+    "questions": [
+        {
+            "question": "Which method in JavaScript is used to convert a JSON string into a JavaScript object?",
+            "hint": "The method starts with 'JSON.p____();'",
+            "options": [
+                {
+                    "option": "JSON.fromString();",
+                    "explanation": "Not the correct answer. 'JSON.fromString()' is not a valid method in JavaScript. The correct method is 'JSON.parse()', which is used to convert a JSON string into a JavaScript object.",
+                    "points": 2
+                },
+                {
+                    "option": "JSON.parse();",
+                    "explanation": "Correct! `JSON.parse()` is used to convert a JSON string into a JavaScript object.",
+                    "points": 3
+                },
+                {
+                    "option": "JSON.toObject();",
+                    "explanation": "Not the correct answer. 'JSON.toObject()' is not a valid method in JavaScript. The correct method is 'JSON.parse()', which is used to convert a JSON string into a JavaScript object.",
+                    "points": 0
+                },
+                {
+                    "option": "JSON.stringify();",
+                    "explanation": "Not the correct answer. 'JSON.stringify()' is used to convert a JavaScript object into a JSON string.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to convert a JavaScript object into a JSON string?",
+            "hint": "The method starts with 'JSON.s______();'",
+            "options": [
+                {
+                    "option": "JSON.fromString();",
+                    "explanation": "Not the correct answer. 'JSON.fromString()' is not a valid method in JavaScript. The correct method is 'JSON.stringify()', which is used to convert a JavaScript object into a JSON string.",
+                    "points": 2
+                },
+                {
+                    "option": "JSON.parse();",
+                    "explanation": "Not the correct answer. 'JSON.parse()' is used to convert a JSON string into a JavaScript object.",
+                    "points": 1
+                },
+                {
+                    "option": "JSON.toObject();",
+                    "explanation": "Not the correct answer. 'JSON.toObject()' is not a valid method in JavaScript. The correct method is 'JSON.stringify()', which is used to convert a JavaScript object into a JSON string.",
+                    "points": 0
+                },
+                {
+                    "option": "JSON.stringify();",
+                    "explanation": "Correct! `JSON.stringify()` is used to convert a JavaScript object into a JSON string.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly declares a JavaScript variable?",
+            "hint": "Pay attention to the syntax used to declare variables in JavaScript.",
+            "options": [
+                {
+                    "option": "let x = 10;",
+                    "explanation": "Correct! 'let x = 10;' is a valid way to declare a JavaScript variable.",
+                    "points": 3
+                },
+                {
+                    "option": "var x = 10;",
+                    "explanation": "Not the recommended answer. 'var' is an older way to declare variables in JavaScript. Although it is still valid, 'let' and 'const' are preferred.",
+                    "points": 2
+                },
+                {
+                    "option": "const x = 10;",
+                    "explanation": "Not the recommended answer. 'const' is used to declare constants in JavaScript, not variables. It cannot be reassigned after declaration.",
+                    "points": 1
+                },
+                {
+                    "option": "int x = 10;",
+                    "explanation": "Not the correct answer. 'int' is not a valid keyword for declaring variables in JavaScript. The correct keyword is 'let', 'var', or 'const'.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly assigns a value to a JavaScript variable?",
+            "hint": "Pay attention to the syntax used to assign values to variables in JavaScript.",
+            "options": [
+                {
+                    "option": "x = 10;",
+                    "explanation": "Not the correct answer. 'x = 10;' is a valid assignment statement, but it assumes that the variable 'x' has already been declared.",
+                    "points": 0
+                },
+                {
+                    "option": "let x = 10;",
+                    "explanation": "Correct! 'let x = 10;' declares a variable 'x' and assigns the value 10 to it.",
+                    "points": 3
+                },
+                {
+                    "option": "const x = 10;",
+                    "explanation": "Correct! 'const x = 10;' declares a constant 'x' and assigns the value 10 to it.",
+                    "points": 3
+                },
+                {
+                    "option": "var x = 10;",
+                    "explanation": "Not the recommended answer. 'var' is an older way to declare variables in JavaScript. Although it is still valid, 'let' and 'const' are preferred.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to comment a single line in JavaScript?",
+            "hint": "Consider the syntax used for comments in JavaScript.",
+            "options": [
+                {
+                    "option": "// This is a comment",
+                    "explanation": "Correct! '// This is a comment' is the syntax for a single-line comment in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "/* This is a comment */",
+                    "explanation": "Not the correct answer. '/* This is a comment */' is the syntax for a multi-line comment in JavaScript.",
+                    "points": 2
+                },
+                {
+                    "option": "<!-- This is a comment -->",
+                    "explanation": "Not the correct answer. '<!-- This is a comment -->' is the syntax used for HTML comments, not JavaScript comments.",
+                    "points": 0
+                },
+                {
+                    "option": "# This is a comment",
+                    "explanation": "Not the correct answer. '# This is a comment' is the syntax used for comments in some programming languages, but not in JavaScript.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to display a message in the console in JavaScript?",
+            "hint": "Consider the methods or functions available for displaying messages in the console.",
+            "options": [
+                {
+                    "option": "console.log();",
+                    "explanation": "Correct! 'console.log();' is used to display a message or value in the console.",
+                    "points": 3
+                },
+                {
+                    "option": "console.warn();",
+                    "explanation": "Not the correct answer. 'console.warn();' is used to display a warning message in the console.",
+                    "points": 1
+                },
+                {
+                    "option": "console.error();",
+                    "explanation": "Not the correct answer. 'console.error();' is used to display an error message in the console.",
+                    "points": 0
+                },
+                {
+                    "option": "console.info();",
+                    "explanation": "Not the correct answer. 'console.info();' is used to display an informational message in the console.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly represents an empty array in JavaScript?",
+            "hint": "Consider the syntax used to create arrays in JavaScript.",
+            "options": [
+                {
+                    "option": "[]",
+                    "explanation": "Correct! '[]' is the syntax for an empty array in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "{}",
+                    "explanation": "Not the correct answer. '{}' represents an empty object in JavaScript, not an array.",
+                    "points": 2
+                },
+                {
+                    "option": "()",
+                    "explanation": "Not the correct answer. '()' represents a function call or a grouping operator in JavaScript, not an array.",
+                    "points": 1
+                },
+                {
+                    "option": "null",
+                    "explanation": "Not the correct answer. 'null' represents the absence of a value, not an array.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the output of the following code?\n\n```\nconsole.log(1 + '1' - 1);\n```",
+            "hint": "Consider the JavaScript rules for type conversion and arithmetic operations.",
+            "options": [
+                {
+                    "option": "10",
+                    "explanation": "Not the correct answer. The expression `1 + '1' - 1` results in the value 10.",
+                    "points": 2
+                },
+                {
+                    "option": "11",
+                    "explanation": "Correct! The expression `1 + '1' - 1` results in the value 11.",
+                    "points": 3
+                },
+                {
+                    "option": "01",
+                    "explanation": "Not the correct answer. The expression `1 + '1' - 1` does not result in the value 01.",
+                    "points": 1
+                },
+                {
+                    "option": "NaN",
+                    "explanation": "Not the correct answer. The expression `1 + '1' - 1` does not result in NaN (Not a Number).",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly checks if a variable is of type 'function' in JavaScript?",
+            "hint": "Consider the available operators or functions for checking data types in JavaScript.",
+            "options": [
+                {
+                    "option": "typeof myVariable === 'function'",
+                    "explanation": "Correct! 'typeof myVariable === 'function'' is a valid way to check if a variable is of type 'function' in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "myVariable instanceof Function",
+                    "explanation": "Correct! 'myVariable instanceof Function' is also a valid way to check if a variable is of type 'function' in JavaScript.",
+                    "points": 2
+                },
+                {
+                    "option": "typeof myVariable == 'function'",
+                    "explanation": "Not the recommended answer. 'typeof myVariable == 'function'' is valid, but it's generally recommended to use strict equality (===) in JavaScript.",
+                    "points": 0
+                },
+                {
+                    "option": "myVariable.constructor === Function",
+                    "explanation": "Not the recommended answer. 'myVariable.constructor === Function' is a valid way to check if a variable is of type 'function', but it's more common to use 'typeof' or 'instanceof'.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to select an HTML element by its ID in JavaScript?",
+            "hint": "Consider the methods or functions available for accessing elements in the DOM.",
+            "options": [
+                {
+                    "option": "document.getElementByID()",
+                    "explanation": "Not the correct answer. 'document.getElementByID()' contains a typo. The correct method is 'document.getElementById()', which is used to select an HTML element by its ID.",
+                    "points": 1
+                },
+                {
+                    "option": "document.querySelector()",
+                    "explanation": "Not the correct answer. 'document.querySelector()' is used to select an HTML element using CSS selectors, but not specifically by ID.",
+                    "points": 2
+                },
+                {
+                    "option": "document.getElementByClass()",
+                    "explanation": "Not the correct answer. 'document.getElementByClass()' is not a valid method in JavaScript. The correct method is 'document.getElementsByClassName()', which is used to select elements by their class name.",
+                    "points": 0
+                },
+                {
+                    "option": "document.getElementById()",
+                    "explanation": "Correct! 'document.getElementById()' is used to select an HTML element by its ID.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to get an element from the DOM by its ID in JavaScript?",
+            "hint": "Consider the methods or functions available for accessing elements in the DOM.",
+            "options": [
+                {
+                    "option": "document.getElementById()",
+                    "explanation": "Correct! 'document.getElementById()' is used to get an element from the DOM by its ID.",
+                    "points": 3
+                },
+                {
+                    "option": "document.querySelector()",
+                    "explanation": "Not the correct answer. 'document.querySelector()' is used to select an HTML element using CSS selectors, but not specifically by ID.",
+                    "points": 2
+                },
+                {
+                    "option": "document.getElementByClass()",
+                    "explanation": "Not the correct answer. 'document.getElementByClass()' is not a valid method in JavaScript. The correct method is 'document.getElementsByClassName()', which is used to select elements by their class name.",
+                    "points": 0
+                },
+                {
+                    "option": "document.getElementsByTagName()",
+                    "explanation": "Not the correct answer. 'document.getElementsByTagName()' is used to get elements from the DOM by their tag name, not by ID.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following methods is NOT a string manipulation method in JavaScript?",
+            "hint": "Consider the methods used to manipulate strings in JavaScript.",
+            "options": [
+                {
+                    "option": "toUpperCase()",
+                    "explanation": "Not the correct answer. 'toUpperCase()' is a valid string manipulation method in JavaScript. It converts a string to uppercase.",
+                    "points": 1
+                },
+                {
+                    "option": "charAt()",
+                    "explanation": "Not the correct answer. 'charAt()' is a valid string manipulation method in JavaScript. It returns the character at a specified index in a string.",
+                    "points": 1
+                },
+                {
+                    "option": "split()",
+                    "explanation": "Not the correct answer. 'split()' is a valid string manipulation method in JavaScript. It splits a string into an array of substrings based on a specified separator.",
+                    "points": 1
+                },
+                {
+                    "option": "forEach()",
+                    "explanation": "Correct! 'forEach()' is not a string manipulation method in JavaScript. It is an array method used to iterate over the elements of an array.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to stop the execution of a JavaScript function?",
+            "hint": "Consider the available statements or keywords for controlling the flow of execution in JavaScript.",
+            "options": [
+                {
+                    "option": "return;",
+                    "explanation": "Correct! 'return;' is used to stop the execution of a JavaScript function and return a value, if any.",
+                    "points": 3
+                },
+                {
+                    "option": "break;",
+                    "explanation": "Not the correct answer. 'break;' is used to exit a loop or a switch statement, not to stop the execution of a function.",
+                    "points": 2
+                },
+                {
+                    "option": "continue;",
+                    "explanation": "Not the correct answer. 'continue;' is used to skip the current iteration of a loop and move to the next iteration, not to stop the execution of a function.",
+                    "points": 1
+                },
+                {
+                    "option": "exit;",
+                    "explanation": "Not the correct answer. 'exit;' is not a valid statement or keyword in JavaScript for stopping the execution of a function.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly defines a JavaScript class?",
+            "hint": "Consider the syntax used to define classes in JavaScript.",
+            "options": [
+                {
+                    "option": "class MyClass {}",
+                    "explanation": "Correct! 'class MyClass {}' is a valid syntax for defining a JavaScript class.",
+                    "points": 3
+                },
+                {
+                    "option": "function MyClass() {}",
+                    "explanation": "Not the recommended answer. 'function MyClass() {}' is a valid syntax for defining a constructor function in JavaScript, not a class.",
+                    "points": 2
+                },
+                {
+                    "option": "const MyClass = {}",
+                    "explanation": "Not the correct answer. 'const MyClass = {}' defines a JavaScript object literal, not a class.",
+                    "points": 0
+                },
+                {
+                    "option": "interface MyClass {}",
+                    "explanation": "Not the correct answer. 'interface MyClass {}' is not a valid syntax for defining a class in JavaScript.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to add an element to the beginning of an array in JavaScript?",
+            "hint": "Consider the methods or functions available for manipulating arrays in JavaScript.",
+            "options": [
+                {
+                    "option": "array.push()",
+                    "explanation": "Not the correct answer. 'array.push()' is used to add elements to the end of an array, not to the beginning.",
+                    "points": 2
+                },
+                {
+                    "option": "array.unshift()",
+                    "explanation": "Correct! 'array.unshift()' is used to add an element to the beginning of an array in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "array.splice()",
+                    "explanation": "Not the correct answer. 'array.splice()' is used to add or remove elements from an array at a specified index, not specifically at the beginning.",
+                    "points": 0
+                },
+                {
+                    "option": "array.concat()",
+                    "explanation": "Not the correct answer. 'array.concat()' is used to merge two or more arrays, not to add an element to the beginning of an array.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is NOT a valid way to make an HTTP request (AJAX) in JavaScript?",
+            "hint": "Consider the methods or functions available for making HTTP requests in JavaScript.",
+            "options": [
+                {
+                    "option": "XMLHttpRequest",
+                    "explanation": "Not the correct answer. 'XMLHttpRequest' is a valid way to make an HTTP request (AJAX) in JavaScript. It is a traditional approach, but still widely used.",
+                    "points": 1
+                },
+                {
+                    "option": "fetch()",
+                    "explanation": "Correct! 'fetch()' is a valid way to make an HTTP request (AJAX) in JavaScript using the Fetch API.",
+                    "points": 3
+                },
+                {
+                    "option": "axios.get()",
+                    "explanation": "Not the correct answer. 'axios.get()' is a valid way to make an HTTP request (AJAX) in JavaScript using the Axios library.",
+                    "points": 2
+                },
+                {
+                    "option": "$.ajax()",
+                    "explanation": "Not the correct answer. '$.ajax()' is a valid way to make an HTTP request (AJAX) in JavaScript using the jQuery library.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to handle errors in JavaScript?",
+            "hint": "Consider the available mechanisms in JavaScript for error handling.",
+            "options": [
+                {
+                    "option": "try...catch",
+                    "explanation": "Correct! 'try...catch' is used to capture and handle errors in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "if...else",
+                    "explanation": "Not the correct answer. 'if...else' is used to execute different blocks of code based on a condition, but it's not specifically designed for error handling.",
+                    "points": 2
+                },
+                {
+                    "option": "throw...catch",
+                    "explanation": "Not the correct answer. 'throw...catch' is not a valid structure in JavaScript for error handling.",
+                    "points": 0
+                },
+                {
+                    "option": "switch...case",
+                    "explanation": "Not the correct answer. 'switch...case' is used to execute different blocks of code based on different cases, but it's not specifically designed for error handling.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to sort an array of numbers in ascending order in JavaScript?",
+            "hint": "Consider the methods or functions available for sorting arrays in JavaScript.",
+            "options": [
+                {
+                    "option": "array.sort()",
+                    "explanation": "Correct! 'array.sort()' is used to sort an array in JavaScript, but it sorts elements as strings by default. Additional logic is required to sort numbers correctly.",
+                    "points": 3
+                },
+                {
+                    "option": "array.reverse()",
+                    "explanation": "Not the correct answer. 'array.reverse()' is used to reverse the order of elements in an array, not to sort them.",
+                    "points": 1
+                },
+                {
+                    "option": "Math.sort()",
+                    "explanation": "Not the correct answer. 'Math.sort()' is not a valid method in JavaScript for sorting arrays.",
+                    "points": 0
+                },
+                {
+                    "option": "array.sort(function(a, b) { return a - b; })",
+                    "explanation": "Correct! 'array.sort(function(a, b) { return a - b; })' is a valid way to sort an array of numbers in ascending order.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options correctly represents a JavaScript arrow function?",
+            "hint": "Consider the syntax used to define arrow functions in JavaScript.",
+            "options": [
+                {
+                    "option": "function() {}",
+                    "explanation": "Not the correct answer. 'function() {}' represents a regular function in JavaScript, not an arrow function.",
+                    "points": 0
+                },
+                {
+                    "option": "() => {}",
+                    "explanation": "Correct! '() => {}' represents an arrow function in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "=> {}",
+                    "explanation": "Not the correct answer. '=> {}' is not a valid syntax for defining an arrow function in JavaScript. It is missing the parentheses for the function's arguments.",
+                    "points": 2
+                },
+                {
+                    "option": "=>",
+                    "explanation": "Not the correct answer. '=>' is not a valid syntax for defining an arrow function in JavaScript. It is missing the curly braces for the function's body.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "Which of the following options is used to deep clone an object in JavaScript?",
+            "hint": "Consider the available techniques for creating a deep copy of an object in JavaScript.",
+            "options": [
+                {
+                    "option": "Object.assign({}, obj)",
+                    "explanation": "Not the correct answer. 'Object.assign({}, obj)' creates a shallow copy of an object, not a deep clone.",
+                    "points": 2
+                },
+                {
+                    "option": "JSON.parse(JSON.stringify(obj))",
+                    "explanation": "Correct! 'JSON.parse(JSON.stringify(obj))' is a common technique used to deep clone an object in JavaScript.",
+                    "points": 3
+                },
+                {
+                    "option": "obj.clone()",
+                    "explanation": "Not the correct answer. 'obj.clone()' is not a built-in method in JavaScript for deep cloning objects.",
+                    "points": 0
+                },
+                {
+                    "option": "Array.from(obj)",
+                    "explanation": "Not the correct answer. 'Array.from(obj)' creates a shallow copy of an array-like object, not a deep clone of an object.",
+                    "points": 1
+                }
+            ]
+        }
+    ]
+}
