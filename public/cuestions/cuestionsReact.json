@@ -1,0 +1,527 @@
+{
+    "name": "Questionnaire",
+    "maxPointsPossible": 100,
+    "description": "This quiz is to know your knowledge about the framework react",
+    "questions": [
+        {
+            "question": "What is React?",
+            "hint": "React is a JavaScript library for building user interfaces.",
+            "options": [
+                {
+                    "option": "A JavaScript framework for building web applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React is a JavaScript library for building user interfaces.'",
+                    "points": 2
+                },
+                {
+                    "option": "A programming language used for building websites.",
+                    "explanation": "Not the correct answer. The correct answer is 'React is a JavaScript library for building user interfaces.'",
+                    "points": 1
+                },
+                {
+                    "option": "A design pattern for creating responsive web pages.",
+                    "explanation": "Not the correct answer. The correct answer is 'React is a JavaScript library for building user interfaces.'",
+                    "points": 0
+                },
+                {
+                    "option": "A JavaScript library for building user interfaces.",
+                    "explanation": "Correct! React is a JavaScript library for building user interfaces.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the Virtual DOM in React, and how does it improve performance?",
+            "hint": "The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.",
+            "options": [
+                {
+                    "option": "The Virtual DOM is a representation of all components in a React application, which improves performance by using fewer computer resources.",
+                    "explanation": "Not the correct answer. The correct answer is 'The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.'",
+                    "points": 2
+                },
+                {
+                    "option": "The Virtual DOM is a technique to create smoother animations in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.'",
+                    "points": 0
+                },
+                {
+                    "option": "The Virtual DOM is a library for rendering components directly to the DOM.",
+                    "explanation": "Not the correct answer. The correct answer is 'The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.'",
+                    "points": 1
+                },
+                {
+                    "option": "The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.",
+                    "explanation": "Correct! The Virtual DOM is a lightweight copy of the actual DOM, and it improves performance by reducing direct manipulations of the real DOM.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is JSX in React, and why is it used?",
+            "hint": "JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.",
+            "options": [
+                {
+                    "option": "JSX is a data format used to communicate with the server in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.'",
+                    "points": 0
+                },
+                {
+                    "option": "JSX is a library that adds styles to React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.'",
+                    "points": 2
+                },
+                {
+                    "option": "JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.",
+                    "explanation": "Correct! JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.",
+                    "points": 3
+                },
+                {
+                    "option": "JSX is a database that stores component states.",
+                    "explanation": "Not the correct answer. The correct answer is 'JSX is a syntax that combines JavaScript and XML to define the structure of elements in React components.'",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "How do you update the state of a component in React?",
+            "hint": "The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.",
+            "options": [
+                {
+                    "option": "By directly modifying the 'state' object of the component.",
+                    "explanation": "Not the correct answer. The correct answer is 'The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.'",
+                    "points": 1
+                },
+                {
+                    "option": "By using the 'updateState' function in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.'",
+                    "points": 2
+                },
+                {
+                    "option": "The state of a component cannot be updated once it is set.",
+                    "explanation": "Not the correct answer. The correct answer is 'The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.'",
+                    "points": 0
+                },
+                {
+                    "option": "The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.",
+                    "explanation": "Correct! The state of a component in React is updated using the 'setState' function and providing a new object that represents the updated state.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the lifecycle of a component in React?",
+            "hint": "The lifecycle of a component in React consists of three phases: Mounting, Updating, and Unmounting.",
+            "options": [
+                {
+                    "option": "Mounting, Updating, and Dismounting.",
+                    "explanation": "Not the correct answer. The correct answer is 'Mounting, Updating, and Unmounting.'",
+                    "points": 1
+                },
+                {
+                    "option": "Starting, Changing, and Stopping.",
+                    "explanation": "Not the correct answer. The correct answer is 'Mounting, Updating, and Unmounting.'",
+                    "points": 0
+                },
+                {
+                    "option": "Mounting, Changing, and Unmounting.",
+                    "explanation": "Not the correct answer. The correct answer is 'Mounting, Updating, and Unmounting.'",
+                    "points": 2
+                },
+                {
+                    "option": "Mounting, Updating, and Unmounting.",
+                    "explanation": "Correct! The lifecycle of a component in React consists of three phases: Mounting, Updating, and Unmounting.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What are props in React, and how are they used?",
+            "hint": "Props are short for 'properties' and are used to pass data from a parent component to a child component in React.",
+            "options": [
+                {
+                    "option": "Props are used to define the structure of a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'Props are short for 'properties' and are used to pass data from a parent component to a child component in React.'",
+                    "points": 1
+                },
+                {
+                    "option": "Props are functions used to manipulate the state of a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'Props are short for 'properties' and are used to pass data from a parent component to a child component in React.'",
+                    "points": 2
+                },
+                {
+                    "option": "Props are used to create animations in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'Props are short for 'properties' and are used to pass data from a parent component to a child component in React.'",
+                    "points": 0
+                },
+                {
+                    "option": "Props are short for 'properties' and are used to pass data from a parent component to a child component in React.",
+                    "explanation": "Correct! Props are short for 'properties' and are used to pass data from a parent component to a child component in React.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the purpose of the 'key' attribute in React lists?",
+            "hint": "The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.",
+            "options": [
+                {
+                    "option": "The 'key' attribute is used to define a unique identifier for a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.'",
+                    "points": 2
+                },
+                {
+                    "option": "The 'key' attribute is used to apply styles to individual elements in a React list.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.'",
+                    "points": 1
+                },
+                {
+                    "option": "The 'key' attribute is used to store data for each item in a React list.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.'",
+                    "points": 0
+                },
+                {
+                    "option": "The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.",
+                    "explanation": "Correct! The 'key' attribute helps React identify which items have changed, added, or removed in a list, making the rendering process more efficient.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is conditional rendering in React, and how is it achieved?",
+            "hint": "Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.",
+            "options": [
+                {
+                    "option": "Conditional rendering is the process of displaying a loading spinner until the component finishes rendering.",
+                    "explanation": "Not the correct answer. The correct answer is 'Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.'",
+                    "points": 1
+                },
+                {
+                    "option": "Conditional rendering is a technique to optimize the performance of React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.'",
+                    "points": 2
+                },
+                {
+                    "option": "Conditional rendering is a way to create dynamic animations in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.'",
+                    "points": 0
+                },
+                {
+                    "option": "Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.",
+                    "explanation": "Correct! Conditional rendering in React allows you to display different content based on certain conditions. It can be achieved using if statements or the ternary operator.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is React Router, and how is it used for routing in React applications?",
+            "hint": "React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.",
+            "options": [
+                {
+                    "option": "React Router is a tool to optimize the rendering of React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Router is a feature for creating animations in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Router is a plugin for adding styles to React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.",
+                    "explanation": "Correct! React Router is a library that provides a way to handle navigation and routing in React applications by mapping URLs to React components.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the purpose of the 'useEffect' hook in React?",
+            "hint": "The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.",
+            "options": [
+                {
+                    "option": "The 'useEffect' hook is used to define the initial state of a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.'",
+                    "points": 2
+                },
+                {
+                    "option": "The 'useEffect' hook is used to handle user interactions in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.'",
+                    "points": 0
+                },
+                {
+                    "option": "The 'useEffect' hook is used to optimize the performance of React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.'",
+                    "points": 1
+                },
+                {
+                    "option": "The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.",
+                    "explanation": "Correct! The 'useEffect' hook is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What are hooks in React, and how do they differ from class components?",
+            "hint": "Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.",
+            "options": [
+                {
+                    "option": "Hooks are a set of design patterns used in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.'",
+                    "points": 2
+                },
+                {
+                    "option": "Hooks are a way to create custom animations in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.'",
+                    "points": 0
+                },
+                {
+                    "option": "Hooks are a library for rendering React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.'",
+                    "points": 1
+                },
+                {
+                    "option": "Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.",
+                    "explanation": "Correct! Hooks are functions that allow you to use state and other React features in functional components. They provide an alternative to using class components for managing state and lifecycle in React.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "How do you handle forms in React?",
+            "hint": "In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.",
+            "options": [
+                {
+                    "option": "Form handling in React is done by directly modifying the HTML form elements.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.'",
+                    "points": 2
+                },
+                {
+                    "option": "Form handling in React is handled automatically by the framework.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.'",
+                    "points": 1
+                },
+                {
+                    "option": "Form handling in React requires using external libraries.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.'",
+                    "points": 0
+                },
+                {
+                    "option": "In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.",
+                    "explanation": "Correct! In React, form handling is achieved by using the 'onChange' event to update the component's state based on user input and using the 'onSubmit' event to process the form data.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What are React components, and how are they used in building applications?",
+            "hint": "React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.",
+            "options": [
+                {
+                    "option": "React components are data models used for managing state in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.'",
+                    "points": 2
+                },
+                {
+                    "option": "React components are used to create animations in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.'",
+                    "points": 0
+                },
+                {
+                    "option": "React components are functions used to handle user interactions in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.'",
+                    "points": 1
+                },
+                {
+                    "option": "React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.",
+                    "explanation": "Correct! React components are reusable, self-contained pieces of user interface that can be combined to build complex UIs. They can be class components or functional components.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "How do you pass data from a parent component to a child component in React?",
+            "hint": "Data can be passed from a parent component to a child component in React by using props.",
+            "options": [
+                {
+                    "option": "Data is automatically passed from a parent component to a child component in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'Data can be passed from a parent component to a child component in React by using props.'",
+                    "points": 0
+                },
+                {
+                    "option": "Data can be passed from a child component to a parent component in React by using props.",
+                    "explanation": "Not the correct answer. The correct answer is 'Data can be passed from a parent component to a child component in React by using props.'",
+                    "points": 2
+                },
+                {
+                    "option": "Data can be passed from a parent component to a child component in React by using props.",
+                    "explanation": "Correct! Data can be passed from a parent component to a child component in React by using props.",
+                    "points": 3
+                },
+                {
+                    "option": "Data can only be passed from sibling components in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'Data can be passed from a parent component to a child component in React by using props.'",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "What is React Context, and how is it used for state management in React applications?",
+            "hint": "React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.",
+            "options": [
+                {
+                    "option": "React Context is a technique for optimizing React component rendering.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Context is a library for handling forms in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Context is a tool for creating animations in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.'",
+                    "points": 0
+                },
+                {
+                    "option": "React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.",
+                    "explanation": "Correct! React Context is a feature that allows data to be passed through the component tree without having to pass props manually at every level. It can be used for global state management in React applications.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the significance of the 'shouldComponentUpdate' method in React class components?",
+            "hint": "The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.",
+            "options": [
+                {
+                    "option": "The 'shouldComponentUpdate' method is used to define the initial state of a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.'",
+                    "points": 2
+                },
+                {
+                    "option": "The 'shouldComponentUpdate' method is used to handle user interactions in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.'",
+                    "points": 0
+                },
+                {
+                    "option": "The 'shouldComponentUpdate' method is used to optimize the performance of React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.'",
+                    "points": 1
+                },
+                {
+                    "option": "The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.",
+                    "explanation": "Correct! The 'shouldComponentUpdate' method allows you to control whether a component should re-render or not, based on the changes in its props or state.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is React.memo() and how is it used to optimize functional components in React?",
+            "hint": "React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.",
+            "options": [
+                {
+                    "option": "React.memo() is a function to render components directly to the DOM in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.'",
+                    "points": 2
+                },
+                {
+                    "option": "React.memo() is a feature for creating animations in functional components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.'",
+                    "points": 0
+                },
+                {
+                    "option": "React.memo() is a tool for optimizing the performance of class components in React.",
+                    "explanation": "Not the correct answer. The correct answer is 'React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.'",
+                    "points": 1
+                },
+                {
+                    "option": "React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.",
+                    "explanation": "Correct! React.memo() is a higher-order component that is used to create memoized versions of functional components. It avoids re-rendering a component if its props have not changed.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the purpose of the 'useReducer' hook in React, and how is it used?",
+            "hint": "The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.",
+            "options": [
+                {
+                    "option": "The 'useReducer' hook is used to handle user interactions in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.'",
+                    "points": 2
+                },
+                {
+                    "option": "The 'useReducer' hook is used to define the initial state of a React component.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.'",
+                    "points": 1
+                },
+                {
+                    "option": "The 'useReducer' hook is used to create animations in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.'",
+                    "points": 0
+                },
+                {
+                    "option": "The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.",
+                    "explanation": "Correct! The 'useReducer' hook is used as an alternative to 'useState' for more complex state management scenarios. It takes a reducer function and an initial state and returns the current state and a dispatch function.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What are React portals, and how are they used?",
+            "hint": "React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.",
+            "options": [
+                {
+                    "option": "React portals are components used to create animations in React applications.",
+                    "explanation": "Not the correct answer. The correct answer is 'React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.'",
+                    "points": 0
+                },
+                {
+                    "option": "React portals are tools for optimizing the performance of React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.'",
+                    "points": 2
+                },
+                {
+                    "option": "React portals are used to handle user interactions in React components.",
+                    "explanation": "Not the correct answer. The correct answer is 'React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.'",
+                    "points": 1
+                },
+                {
+                    "option": "React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.",
+                    "explanation": "Correct! React portals are a feature that allows you to render children components outside the DOM hierarchy of the parent component. They are used for scenarios like modal dialogs and tooltips.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "How do you handle errors in React applications?",
+            "hint": "In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.",
+            "options": [
+                {
+                    "option": "Errors in React applications are automatically handled by the framework.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.'",
+                    "points": 1
+                },
+                {
+                    "option": "Errors in React applications are handled by wrapping components with try-catch statements.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.'",
+                    "points": 2
+                },
+                {
+                    "option": "Errors in React applications are handled by using external libraries.",
+                    "explanation": "Not the correct answer. The correct answer is 'In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.'",
+                    "points": 0
+                },
+                {
+                    "option": "In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.",
+                    "explanation": "Correct! In React, you can handle errors by using Error Boundaries. Error Boundaries are special components that catch errors in their child components during rendering, and you can display a fallback UI to the user.",
+                    "points": 3
+                }
+            ]
+        }                                                                                                                                        
+    ]
+}
