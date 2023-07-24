@@ -1,0 +1,527 @@
+{
+    "name": "Questionnaire",
+    "maxPointsPossible": 100,
+    "description": "This quiz is to know your knowledge about the css",
+    "questions": [
+        {
+            "question": "What does CSS stand for?",
+            "hint": "The first letter stands for 'Cascading'.",
+            "options": [
+                {
+                    "option": "Cascading Style Sheets",
+                    "explanation": "Correct! CSS stands for Cascading Style Sheets.",
+                    "points": 3
+                },
+                {
+                    "option": "Cascading Script Styles",
+                    "explanation": "Not the correct answer. The correct answer is 'Cascading Style Sheets'.",
+                    "points": 0
+                },
+                {
+                    "option": "Computer Style Sheets",
+                    "explanation": "Not the correct answer. The correct answer is 'Cascading Style Sheets'.",
+                    "points": 1
+                },
+                {
+                    "option": "Creative Style Sheets",
+                    "explanation": "Not the correct answer. The correct answer is 'Cascading Style Sheets'.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "How do you link an external CSS file to an HTML document?",
+            "hint": "Look for the HTML tag used to link external resources.",
+            "options": [
+                {
+                    "option": "<link rel='stylesheet' href='styles.css'>",
+                    "explanation": "Correct! The correct way to link an external CSS file is with the '<link>' tag.",
+                    "points": 3
+                },
+                {
+                    "option": "<style src='styles.css'></style>",
+                    "explanation": "Not the correct answer. The correct answer is '<link rel='stylesheet' href='styles.css'>'.",
+                    "points": 2
+                },
+                {
+                    "option": "<stylesheet>styles.css</stylesheet>",
+                    "explanation": "Not the correct answer. The correct answer is '<link rel='stylesheet' href='styles.css'>'.",
+                    "points": 1
+                },
+                {
+                    "option": "<css>styles.css</css>",
+                    "explanation": "Not the correct answer. The correct answer is '<link rel='stylesheet' href='styles.css'>'.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "Which CSS property is used to change the text color?",
+            "hint": "This property starts with the letter 'c'.",
+            "options": [
+                {
+                    "option": "color",
+                    "explanation": "Correct! 'color' is used to change the text color in CSS.",
+                    "points": 3
+                },
+                {
+                    "option": "font-color",
+                    "explanation": "Not the correct answer. The correct answer is 'color'.",
+                    "points": 0
+                },
+                {
+                    "option": "text-color",
+                    "explanation": "Not the correct answer. The correct answer is 'color'.",
+                    "points": 2
+                },
+                {
+                    "option": "text-style",
+                    "explanation": "Not the correct answer. The correct answer is 'color'.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "How do you select an element with the ID 'header' in CSS?",
+            "hint": "Use the '#' symbol followed by the ID name.",
+            "options": [
+                {
+                    "option": "#header",
+                    "explanation": "Correct! To select an element with the ID 'header', use '#header' in CSS.",
+                    "points": 3
+                },
+                {
+                    "option": ".header",
+                    "explanation": "Not the correct answer. The '.' symbol is used for class selectors, not IDs.",
+                    "points": 2
+                },
+                {
+                    "option": "header",
+                    "explanation": "Not the correct answer. Missing the '#' symbol before 'header'.",
+                    "points": 1
+                },
+                {
+                    "option": "$header",
+                    "explanation": "Not the correct answer. The correct answer is '#header'.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the correct CSS syntax to set the font size to 16 pixels?",
+            "hint": "The property to set the font size starts with 'font-'.",
+            "options": [
+                {
+                    "option": "font-size: 16px;",
+                    "explanation": "Correct! 'font-size' is used to set the font size in CSS.",
+                    "points": 3
+                },
+                {
+                    "option": "fontsize: 16px;",
+                    "explanation": "Not the correct answer. The correct property is 'font-size'.",
+                    "points": 2
+                },
+                {
+                    "option": "text-size: 16px;",
+                    "explanation": "Not the correct answer. The correct property is 'font-size'.",
+                    "points": 0
+                },
+                {
+                    "option": "size: 16px;",
+                    "explanation": "Not the correct answer. The correct property is 'font-size'.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "How do you set multiple CSS properties for an element using a single class?",
+            "hint": "Combine the properties within curly braces.",
+            "options": [
+                {
+                    "option": ".my-class { color: blue; font-size: 14px; }",
+                    "explanation": "Correct! Multiple CSS properties can be set within curly braces for a class.",
+                    "points": 3
+                },
+                {
+                    "option": ".my-class { color = blue; font-size = 14px; }",
+                    "explanation": "Not the correct answer. Use colons (:) to assign values, not equal signs (=).",
+                    "points": 2
+                },
+                {
+                    "option": ".my-class { color; blue; font-size; 14px; }",
+                    "explanation": "Not the correct answer. Proper syntax requires colons (:) between properties and values.",
+                    "points": 1
+                },
+                {
+                    "option": ".my-class { color: blue; size: 14px; }",
+                    "explanation": "Not the correct answer. The correct property is 'font-size', not 'size'.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the 'box model' in CSS?",
+            "hint": "It describes how elements are spaced and sized.",
+            "options": [
+                {
+                    "option": "A model for creating boxes with CSS",
+                    "explanation": "Not the correct answer. The 'box model' refers to how elements are spaced and sized.",
+                    "points": 2
+                },
+                {
+                    "option": "A model used for creating animations",
+                    "explanation": "Not the correct answer. The 'box model' refers to how elements are spaced and sized.",
+                    "points": 1
+                },
+                {
+                    "option": "A model for applying gradients to elements",
+                    "explanation": "Not the correct answer. The 'box model' refers to how elements are spaced and sized.",
+                    "points": 0
+                },
+                {
+                    "option": "A model describing the spacing and sizing of elements",
+                    "explanation": "Correct! The 'box model' describes how elements are spaced and sized in CSS.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "How do you center an element horizontally in CSS?",
+            "hint": "Use the margin property with the value 'auto'.",
+            "options": [
+                {
+                    "option": "margin: auto;",
+                    "explanation": "Correct! Using 'margin: auto;' horizontally centers an element.",
+                    "points": 3
+                },
+                {
+                    "option": "align: center;",
+                    "explanation": "Not the correct answer. The 'align' property does not center elements horizontally.",
+                    "points": 2
+                },
+                {
+                    "option": "center: horizontal;",
+                    "explanation": "Not the correct answer. 'center' is not a valid property for horizontal alignment.",
+                    "points": 0
+                },
+                {
+                    "option": "float: center;",
+                    "explanation": "Not the correct answer. The 'float' property is used for layout, not alignment.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "What does the 'z-index' property in CSS control?",
+            "hint": "It determines the stacking order of elements.",
+            "options": [
+                {
+                    "option": "The size of the element",
+                    "explanation": "Not the correct answer. The 'z-index' property does not control the size of an element.",
+                    "points": 1
+                },
+                {
+                    "option": "The vertical alignment of an element",
+                    "explanation": "Not the correct answer. 'z-index' is not used for vertical alignment.",
+                    "points": 2
+                },
+                {
+                    "option": "The font size of the text",
+                    "explanation": "Not the correct answer. The 'z-index' property is not related to font size.",
+                    "points": 0
+                },
+                {
+                    "option": "The stacking order of elements",
+                    "explanation": "Correct! 'z-index' determines the stacking order of elements in CSS.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What is the correct way to apply a CSS style to an element with the class 'my-class' only when it is being hovered over?",
+            "hint": "Use the ':hover' pseudo-class.",
+            "options": [
+                {
+                    "option": ".my-class:hover { color: red; }",
+                    "explanation": "Correct! ':hover' applies the style only when the element is being hovered over.",
+                    "points": 3
+                },
+                {
+                    "option": ".my-class { hover: color(red); }",
+                    "explanation": "Not the correct answer. ':hover' is a pseudo-class, not a property.",
+                    "points": 2
+                },
+                {
+                    "option": ".my-class { color: red; }",
+                    "explanation": "Not the correct answer. This style would be applied at all times, not just on hover.",
+                    "points": 0
+                },
+                {
+                    "option": ".my-class.hover { color: red; }",
+                    "explanation": "Not the correct answer. The correct syntax is ':hover' after the class selector.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between 'display: inline;' and 'display: block;' in CSS?",
+            "hint": "Think about how elements are displayed and how they behave.",
+            "options": [
+                {
+                    "option": "'display: inline;' makes an element take only as much width as necessary, while 'display: block;' makes an element take up the full width available.",
+                    "explanation": "Correct! 'inline' elements only take as much width as necessary, while 'block' elements take up the full width.",
+                    "points": 3
+                },
+                {
+                    "option": "'display: inline;' and 'display: block;' are interchangeable and have the same behavior.",
+                    "explanation": "Not the correct answer. 'inline' and 'block' have different behaviors in CSS.",
+                    "points": 0
+                },
+                {
+                    "option": "'display: inline;' is used for text elements, while 'display: block;' is used for containers.",
+                    "explanation": "Not the correct answer. Both 'inline' and 'block' can be used for various types of elements.",
+                    "points": 1
+                },
+                {
+                    "option": "'display: inline;' elements are vertically stacked, while 'display: block;' elements are placed side by side.",
+                    "explanation": "Not the correct answer. The vertical arrangement is not determined by the 'display' property.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "What does the 'transition' property do in CSS?",
+            "hint": "It creates smooth animations when a property changes.",
+            "options": [
+                {
+                    "option": "It sets the speed of scrolling",
+                    "explanation": "Not the correct answer. The 'transition' property is not related to scrolling speed.",
+                    "points": 0
+                },
+                {
+                    "option": "It changes the font size of an element",
+                    "explanation": "Not the correct answer. 'transition' is not used for changing font size.",
+                    "points": 0
+                },
+                {
+                    "option": "It creates smooth animations when a property changes",
+                    "explanation": "Correct! 'transition' is used to create smooth animations when a property changes.",
+                    "points": 3
+                },
+                {
+                    "option": "It controls the timing of CSS animations",
+                    "explanation": "Not the correct answer. The 'transition' property itself creates the animation timing.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the correct way to target all <p> elements that are direct children of a <div> element with the class 'my-div' in CSS?",
+            "hint": "Use the '>' symbol to target direct children.",
+            "options": [
+                {
+                    "option": ".my-div p",
+                    "explanation": "Not the correct answer. This targets all <p> elements inside the <div> with the class 'my-div', including nested ones.",
+                    "points": 0
+                },
+                {
+                    "option": ".my-div > p",
+                    "explanation": "Correct! This targets only direct <p> children of the <div> with the class 'my-div'.",
+                    "points": 3
+                },
+                {
+                    "option": "div.my-div > p",
+                    "explanation": "Not the correct answer. The 'div' is unnecessary; class selectors alone work fine.",
+                    "points": 2
+                },
+                {
+                    "option": "#my-div > p",
+                    "explanation": "Not the correct answer. The '#' symbol is used for IDs, not classes.",
+                    "points": 1
+                }
+            ]
+        },
+        {
+            "question": "What is the purpose of the 'box-shadow' property in CSS?",
+            "hint": "It creates a shadow effect around an element.",
+            "options": [
+                {
+                    "option": "It adds a solid border around an element",
+                    "explanation": "Not the correct answer. The 'box-shadow' property creates a shadow effect, not a border.",
+                    "points": 0
+                },
+                {
+                    "option": "It changes the background color of an element",
+                    "explanation": "Not the correct answer. 'box-shadow' is not used for changing background color.",
+                    "points": 2
+                },
+                {
+                    "option": "It creates a shadow effect around an element",
+                    "explanation": "Correct! The 'box-shadow' property is used to create a shadow around an element.",
+                    "points": 3
+                },
+                {
+                    "option": "It applies rounded corners to an element",
+                    "explanation": "Not the correct answer. Rounded corners are achieved with 'border-radius', not 'box-shadow'.",
+                    "points": 2
+                }
+            ]
+        },
+        {
+            "question": "What does the 'nth-child()' pseudo-class in CSS select?",
+            "hint": "It targets specific children based on their position.",
+            "options": [
+                {
+                    "option": "All child elements",
+                    "explanation": "Not the correct answer. 'nth-child()' selects specific children, not all of them.",
+                    "points": 0
+                },
+                {
+                    "option": "Even-numbered child elements",
+                    "explanation": "Not the correct answer. 'nth-child()' can target any specific position, not just even numbers.",
+                    "points": 2
+                },
+                {
+                    "option": "Odd-numbered child elements",
+                    "explanation": "Not the correct answer. 'nth-child()' can target any specific position, not just odd numbers.",
+                    "points": 1
+                },
+                {
+                    "option": "Child elements at a specific position",
+                    "explanation": "Correct! 'nth-child()' selects child elements at a specific position based on the provided formula.",
+                    "points": 3
+                }
+            ]
+        },
+        {
+            "question": "What does the 'float' property in CSS do?",
+            "hint": "It controls how elements are positioned within their parent container.",
+            "options": [
+                {
+                    "option": "It makes an element 'float' on top of other elements",
+                    "explanation": "Not the correct answer. The 'float' property does not cause elements to float on top of others.",
+                    "points": 2
+                },
+                {
+                    "option": "It positions an element to the left or right within its parent container",
+                    "explanation": "Correct! The 'float' property positions an element to the left or right.",
+                    "points": 3
+                },
+                {
+                    "option": "It creates a floating effect for an element",
+                    "explanation": "Not the correct answer. The 'float' property positions an element, but it's not about creating a floating effect.",
+                    "points": 1
+                },
+                {
+                    "option": "It controls the height of an element",
+                    "explanation": "Not the correct answer. 'float' does not control the height of elements.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the 'pseudo-element' in CSS?",
+            "hint": "It targets a specific part of an element.",
+            "options": [
+                {
+                    "option": "An element that does not physically exist in the DOM",
+                    "explanation": "Not the correct answer. Pseudo-elements do not create additional elements in the DOM.",
+                    "points": 2
+                },
+                {
+                    "option": "An element that is created by JavaScript",
+                    "explanation": "Not the correct answer. Pseudo-elements are not created by JavaScript.",
+                    "points": 1
+                },
+                {
+                    "option": "A part of an element that can be targeted and styled",
+                    "explanation": "Correct! Pseudo-elements target specific parts of an element for styling.",
+                    "points": 3
+                },
+                {
+                    "option": "An element with a specific class name",
+                    "explanation": "Not the correct answer. Pseudo-elements are not related to class names.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "How do you create a CSS animation?",
+            "hint": "Use the '@keyframes' rule.",
+            "options": [
+                {
+                    "option": "Use the 'animation' property with the desired animation name",
+                    "explanation": "Not the correct answer. The 'animation' property applies an animation, but you need to define the animation first.",
+                    "points": 2
+                },
+                {
+                    "option": "Use the 'transition' property with the desired animation name",
+                    "explanation": "Not the correct answer. The 'transition' property is used for smooth property changes, not animations.",
+                    "points": 1
+                },
+                {
+                    "option": "Use the '@keyframes' rule to define the animation steps and the 'animation' property to apply it",
+                    "explanation": "Correct! '@keyframes' is used to define the animation steps, and the 'animation' property applies it.",
+                    "points": 3
+                },
+                {
+                    "option": "Use the 'animate' method in JavaScript to create CSS animations",
+                    "explanation": "Not the correct answer. CSS animations are defined in CSS using '@keyframes'.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "How do you hide an element in CSS while still reserving its space?",
+            "hint": "Look for a property that hides an element but keeps its space.",
+            "options": [
+                {
+                    "option": "display: hidden;",
+                    "explanation": "Not the correct answer. 'display: hidden;' is not a valid value for the 'display' property.",
+                    "points": 2
+                },
+                {
+                    "option": "visibility: hidden;",
+                    "explanation": "Correct! 'visibility: hidden;' hides the element but keeps its space.",
+                    "points": 3
+                },
+                {
+                    "option": "opacity: 0;",
+                    "explanation": "Not the correct answer. 'opacity: 0;' makes the element transparent, but it still takes up space.",
+                    "points": 1
+                },
+                {
+                    "option": "display: none;",
+                    "explanation": "Not the correct answer. 'display: none;' removes the element from the layout entirely.",
+                    "points": 0
+                }
+            ]
+        },
+        {
+            "question": "What is the 'clearfix' technique in CSS used for?",
+            "hint": "It is commonly used with floated elements.",
+            "options": [
+                {
+                    "option": "To apply a clear background color to an element",
+                    "explanation": "Not the correct answer. 'clearfix' is not related to background colors.",
+                    "points": 0
+                },
+                {
+                    "option": "To create a clear border around an element",
+                    "explanation": "Not the correct answer. 'clearfix' does not deal with borders.",
+                    "points": 1
+                },
+                {
+                    "option": "To clear the float of elements and prevent layout issues",
+                    "explanation": "Correct! 'clearfix' is used to clear floats and prevent layout issues caused by floated elements.",
+                    "points": 3
+                },
+                {
+                    "option": "To hide elements with a clear transition effect",
+                    "explanation": "Not the correct answer. The 'clearfix' technique is not related to transitions.",
+                    "points": 2
+                }
+            ]
+        }
+    ]
+}
