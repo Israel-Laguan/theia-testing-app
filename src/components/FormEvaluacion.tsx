@@ -31,7 +31,7 @@ export default function Quiz() {
     <div>
       <h1>{cuestionJs.questions[currentQuestion].question}</h1>
       <p>{cuestionJs.questions[currentQuestion].hint}</p>
-      <p>Pregunta {currentQuestion + 1} de {cuestionJs.questions.length}</p>
+      <p>Question {currentQuestion + 1} de {cuestionJs.questions.length}</p>
       <form>
         {renderOptions()}
       </form>
