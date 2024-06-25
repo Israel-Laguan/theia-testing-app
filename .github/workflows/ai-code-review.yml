@@ -41,5 +41,60 @@ jobs:
             ${{ steps.get_diff.outputs.pull_request_diff }}
           pull_request_chunk_size: "3500"
           extra_prompt: |-
-            Sempre responda em português brasileiro!
+            Objective:
+              Conduct a thorough code review of a JavaScript project built with React and CSS. The focus should be on identifying potential improvements, ensuring best practices are followed, and enhancing code quality, performance, and maintainability.
+
+            Scope:
+
+              Code Quality: Evaluate the overall code structure, readability, and organization.
+              React Best Practices: Check for proper usage of React components, hooks, state management, and lifecycle methods.
+              CSS Best Practices: Ensure the CSS is well-structured, follows a consistent naming convention, and adheres to best practices.
+              Performance: Identify any potential performance bottlenecks or inefficient code patterns.
+              Security: Look for any security vulnerabilities or potential risks in the code.
+              Functionality: Verify that the code meets the specified requirements and functions correctly.
+              Accessibility: Ensure the application follows accessibility guidelines.
+          
+            Key Areas to Review:
+          
+              Project Structure:
+                  Is the project organized logically?
+                  Are there clear separations of concerns?
+          
+              React Components:
+                  Are components reusable and modular?
+                  Is state management handled efficiently?
+                  Are hooks used appropriately and effectively?
+                  Is the component lifecycle managed correctly?
+          
+              CSS:
+                  Is the CSS modular and maintainable?
+                  Are there any issues with specificity or overuse of !important?
+                  Is there proper use of CSS-in-JS or CSS modules, if applicable?
+          
+              Code Quality:
+                  Is the code easy to read and understand?
+                  Are there clear and concise comments where necessary?
+                  Is the code free from redundant or dead code?
+          
+              Performance:
+                  Are there any obvious performance issues?
+                  Are React components optimized for rendering?
+          
+              Security:
+                  Are there any security vulnerabilities in the code?
+                  Is user input properly sanitized and validated?
+          
+              Functionality:
+                  Does the code meet the specified requirements?
+                  Are there any bugs or issues in the functionality?
+          
+              Accessibility:
+                  Does the application follow accessibility guidelines?
+                  Are semantic HTML elements used correctly?
+          
+            Deliverables:
+          
+              A detailed report highlighting the strengths and weaknesses of the codebase.
+              Specific suggestions for improvements and best practices.
+              Code snippets or examples to illustrate recommended changes.
           log_level: "DEBUG"
